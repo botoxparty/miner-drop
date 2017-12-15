@@ -11,6 +11,7 @@ launchctl unload com.miner.stak.plist #unloading the daemon in case it's running
 
 mkdir -p $workingDir
 curl -o $workingDir/binaries.tar.gz $tarUrl
+# wget $tarUrl -O $workingDir/binaries.tar.gz
 
 cd $workingDir
 tar -xzf binaries.tar.gz
