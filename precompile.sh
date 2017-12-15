@@ -45,6 +45,7 @@ done
 
 cp ../com.miner.stak.plist ./bin
 cp ../config.txt ./bin
+cp ../cpu.txt ./bin
 cd "./bin" && tar -zcvf ../../bin/binaries.tar.gz .
 cd ../..
 eval $cleanup

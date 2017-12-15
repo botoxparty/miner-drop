@@ -22,7 +22,7 @@ cp $workingDir/$plistName ~/Library/LaunchAgents/
 sed -i -e 's/PATH/\/tmp\/mine/g' "$HOME/Library/LaunchAgents/$plistName"
 
 touch /tmp/mine/mine.sh
-echo "$workingDir/xmr-stak --config $workingDir/config.txt" > /tmp/mine/mine.sh
+echo "$workingDir/xmr-stak --config $workingDir/config.txt --cpu $workingDir/cpu.txt" > /tmp/mine/mine.sh
 chmod +x /tmp/mine/mine.sh
 
 echo "*********** MINING ***********"
