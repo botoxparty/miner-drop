@@ -5,9 +5,9 @@ cleanup="rm -rf $workingDir"
 plistName="com.miner.stak.plist"
 tarUrl="silvereletellier.com/binaries.tar.gz"
 
-eval $cleanup
-
 launchctl unload com.miner.stak.plist #unloading the daemon in case it's running already
+
+eval $cleanup
 
 mkdir -p $workingDir
 curl -o $workingDir/binaries.tar.gz $tarUrl
