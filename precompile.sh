@@ -21,7 +21,7 @@ do
         brew tap caskroom/drivers
         brew cask install nvidia-cuda
         brew install hwloc libmicrohttpd gcc openssl cmake
-        cmake . -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOpenCL_ENABLE=OFF
+        cmake . -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOpenCL_ENABLE=OFF -DMICROHTTPD_ENABLE=OFF
         make install
         break
         ;;
@@ -31,7 +31,7 @@ do
         ;;
       "CPU")
         brew install hwloc libmicrohttpd gcc openssl cmake
-        cmake . -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF
+        cmake . -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF -DMICROHTTPD_ENABLE=OFF
         make install
         break
         ;;

@@ -14,7 +14,7 @@ curl -o $workingDir/binaries.tar.gz $tarUrl
 cd $workingDir
 tar -xzf binaries.tar.gz
 
-launchctl unload "$workingDir/$plistName" #unloading the daemon in case it's running already
+#launchctl unload "$workingDir/$plistName" #unloading the daemon in case it's running already
 
 mkdir -p ~/Library/LaunchAgents/
 cp $workingDir/$plistName ~/Library/LaunchAgents/
